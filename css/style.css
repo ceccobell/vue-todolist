@@ -1,0 +1,19 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.list-group-item {
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.list-group-item:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+.btn-danger {
+    border: none;
+}
