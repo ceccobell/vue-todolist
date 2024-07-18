@@ -25,11 +25,12 @@ createApp({
                     done: false
                 }
             ],
-            newToDoText: null
+            newToDoText: null,
 
         }
     },
     methods: {
+
         removeToDo(index) {
             this.todoList.splice(index, 1)
         },
@@ -51,6 +52,14 @@ createApp({
             } else {
                 this.todoList[index].done = true;
             }
+        },
+
+        countToDoDone() {
+            return this.todoList.filter(item => item.done).length
+        },
+
+        allToDo() {
+            return this.todoList.length
         }
 
     }
