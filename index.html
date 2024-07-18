@@ -22,8 +22,8 @@
             <div class="row">
                 <div class="col-12">
                     <ul class="list-group">
-                        <li class="list-group-item bg-info d-flex justify-content-between text-secondary-emphasis" v-for="(item, index) in todoList" :class="{ 'text-decoration-line-through': item.done }">
-                            {{ item.text }}
+                        <li class="list-group-item bg-info d-flex justify-content-between text-secondary-emphasis" v-for="(item, index) in todoList" :class="{ 'text-decoration-line-through': item.done }" @click="changeDoneItem(index)">
+                           {{ item.text }}
                             <div type="button" class="btn btn-danger" @click="removeToDo(index)"><i class="fa-solid fa-trash-can"></i></div>
                         </li>
                     </ul>
