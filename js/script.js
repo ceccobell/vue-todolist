@@ -25,7 +25,7 @@ createApp({
                     done: false
                 }
             ],
-            newToDoText: ""
+            newToDoText: null
 
         }
     },
@@ -40,6 +40,7 @@ createApp({
                 done: false
             }
             this.todoList.push(element)
+            this.newToDoText = null
         }
     }
 }).mount('#app')
