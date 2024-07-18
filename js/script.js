@@ -24,13 +24,22 @@ createApp({
                     text: "Pulisci la casa",
                     done: false
                 }
-            ]
+            ],
+            newToDoText: ""
 
         }
     },
     methods: {
         removeToDo(index) {
             this.todoList.splice(index, 1)
+        },
+
+        addToDo() {
+            let element = {
+                text: this.newToDoText,
+                done: false
+            }
+            this.todoList.push(element)
         }
     }
 }).mount('#app')
