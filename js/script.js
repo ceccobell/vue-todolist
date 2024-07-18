@@ -35,12 +35,14 @@ createApp({
         },
 
         addToDo() {
-            let element = {
-                text: this.newToDoText,
-                done: false
+            if (this.newToDoText.trim() != "") {
+                let element = {
+                    text: this.newToDoText,
+                    done: false
+                }
+                this.todoList.push(element)
+                this.newToDoText = ""
             }
-            this.todoList.push(element)
-            this.newToDoText = null
         },
 
         changeDoneItem(index) {
