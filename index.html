@@ -19,9 +19,9 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-12 bg-info rounded">
-                    <ul v-for="item, index in todoList">
-                        <li>{{ item.text }}</li>
+                <div class="col-12">
+                    <ul class="list-group">
+                        <li class="list-group-item bg-info" v-for="(item, index) in todoList" :class="{ 'text-decoration-line-through': item.done }">{{ item.text }}</li>
                     </ul>
                 </div>
             </div>
